@@ -2,7 +2,6 @@ body {
   background-color: yellow;
 }
 .div {
-  z-index: -1;
   font-size: 50px;
   top: 0;
   background-color: rgb(255, 206, 206);
@@ -49,13 +48,14 @@ body {
 .footnote {
   border: 0px solid black;
   border-radius: 10px;
-  background-color: red;
+  background-color: red;gz
   color: white;
   margin: auto;
   padding: 15px;
   bottom: 0;
   right: 0;
   position: fixed;
+  z-index: -1;
 }
 #bar {
   width: 100px;
