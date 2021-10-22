@@ -108,6 +108,7 @@ a:active {
   font-size: 20px;
 }
 #hlt a:link {
+  text-decoration: none;
   float: right;
   margin-right: 20px;
   color: #ade8ff;
@@ -117,6 +118,7 @@ a:active {
 
 #hlt a:visited {
   float: right;
+  text-decoration: none;
   margin-right: 20px;
   color: #ade8ff;
   font-weight: 700;
@@ -124,6 +126,7 @@ a:active {
 }
 #hlt a:hover {
   float: right;
+  text-decoration: none;
   margin-right: 20px;
   color: yellow;
   font-weight: 700;
@@ -131,12 +134,12 @@ a:active {
 }
 
 #himg {
-  width: 99.5%;
+  width: 98.4%;
   border-radius: 10px;
 }
 
 #wrap {
-  height: 1000px;
+  height: 1500px;
   width: 98%;
   border-radius: 10px;
   padding-left: 1.2%;
@@ -145,7 +148,7 @@ a:active {
 }
 
 #content {
-  height: 980px;
+  height: 1480px;
   width: 58.59%;
   position: absolute;
   display: inline;
@@ -161,7 +164,7 @@ a:active {
 }
 
 #sidebar1 {
-  height: 980px;
+  height: 1480px;
   width: 14%;
   z-index: 10;
   position: absolute;
@@ -178,7 +181,7 @@ a:active {
 }
 
 #sidebar2 {
-  height: 980px;
+  height: 1480px;
   width: 14%;
   position: absolute;
   display: inline;
@@ -209,52 +212,70 @@ a:active {
 
 /* MORE */
 
-.sidenav {
+/* The Overlay (background) */
+.overlay {
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */
   height: 100%;
   width: 0;
-  position: fixed;
-  z-index: 99;
-  top: 0;
+  position: fixed; /* Stay in place */
+  z-index: 99; /* Sit on top */
   left: 0;
-  background-color: #111;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
+  top: 0;
+  background-color: rgb(0, 0, 0); /* Black fallback color */
+  background-color: rgba(0, 0, 0, 0.9); /* Black w/opacity */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
 }
 
-.sidenav a {
-  z-index: 99;
-  padding: 8px 8px 8px 32px;
+/* Position the content inside the overlay */
+.overlay-content {
+  position: relative;
+  top: 25%; /* 25% from the top */
+  width: 100%; /* 100% width */
+  text-align: center; /* Centered text/links */
+  margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+  padding: 8px;
   text-decoration: none;
-  font-size: 25px;
-  color: darkorange;
-  display: block;
-  transition: 0.3s;
+  font-size: 36px;
+  color: #f4831b;
+  display: block; /* Display block instead of inline */
+  transition: 0.3s; /* Transition effects on hover (color) */
 }
 
-.sidenav a:hover {
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover,
+.overlay a:focus {
   color: yellow;
 }
 
-.sidenav .closebtn {
+/* Position the close button (top right corner) */
+.overlay .closebtn {
   position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
 }
 
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
 @media screen and (max-height: 450px) {
-  .sidenav {
-    padding-top: 15px;
+  .overlay a {
+    font-size: 20px;
   }
-  .sidenav a {
-    font-size: 18px;
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
   }
 }
 
 #more {
-  text-decoration: underline;
+  font-size: 25px;
+  cursor: pointer;
+  text-decoration: none;
   float: right;
   margin-right: 20px;
   color: #ade8ff;
@@ -263,7 +284,9 @@ a:active {
 }
 
 #more:hover {
-  text-decoration: underline;
+  font-size: 25px;
+  cursor: pointer;
+  text-decoration: none;
   float: right;
   margin-right: 20px;
   color: yellow;
@@ -272,3 +295,43 @@ a:active {
 }
 
 /* END_MORE */
+
+/* Social */
+
+.icon-bar {
+  z-index: 50;
+  position: fixed;
+  top: 97.5%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.icon-bar a {
+  border-radius: 10px;
+  display: block;
+  text-align: center;
+  padding: 15px 45px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 20px;
+  float: right;
+}
+
+.icon-bar a:hover {
+  background-color: #000;
+}
+.github {
+  background: #183153;
+  color: white;
+}
+
+.scratch {
+  background: #25aff4;
+  color: white;
+}
+
+.reddit {
+  background-color: #ed4202;
+  color: white;
+}

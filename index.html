@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script
+      src="https://kit.fontawesome.com/69f3fc34b3.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="style/style.css" />
+    <link rel="shortcut icon" href="img/favicon.png" type="image/png" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,17 +14,26 @@
     <script src="js/index.js"></script>
   </head>
   <body>
+    <div class="icon-bar">
+      <a href="https://github.com/0baa" class="github"
+        ><i class="fa fa-github-alt"></i
+      ></a>
+      <a href="https://scratch.mit.edu/users/Fantastic_Enigma/" class="scratch"
+        ><img height="19px" src="https://scratch.mit.edu/favicon.ico"
+      /></a>
+      <a href="https://www.reddit.com/users/0baa-orginal" class="reddit"
+        ><i class="fa fa-reddit-alien"></i
+      ></a>
+    </div>
+
     <div id="header">
       <div id="heading">Fat Purples</div>
 
       <div id="ht">Hello Beautiful World!</div>
 
       <div id="hlt">
-        <span
-          id="more"
-          style="font-size: 25px; cursor: pointer"
-          onclick="openNav()"
-          >&#9776; More</span
+        <span id="more" onclick="openNav()"
+          ><i class="fa fa-bars"></i> More</span
         >
 
         <a
@@ -29,15 +43,20 @@
         >
           DuckDuckGo</a
         >
-
         <a href="#footer">Go to Bottom</a>
         <a href="http://example.org">Example</a>
       </div>
+    </div>
 
-      <div id="mySidenav" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
-          >&times;</a
-        >
+    <!-- The overlay -->
+    <div id="myNav" class="overlay">
+      <!-- Button to close the overlay navigation -->
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+        >&times;</a
+      >
+
+      <!-- Overlay content -->
+      <div class="overlay-content">
         <a href="#">Dummy Link1</a>
         <a href="#">Dummy Link2</a>
         <a href="#">Dummy Link3</a>
