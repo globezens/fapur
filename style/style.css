@@ -96,6 +96,7 @@ a:active {
 }
 
 #heading {
+  text-decoration: underline;
   font-family: Reci;
   font-size: 65px;
   font-weight: 700;
