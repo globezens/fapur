@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fat Purples</title>
+    <script src="js/index.js"></script>
   </head>
   <body>
     <div id="header">
@@ -14,6 +15,13 @@
       <div id="ht">Hello Beautiful World!</div>
 
       <div id="hlt">
+        <span
+          id="more"
+          style="font-size: 25px; cursor: pointer"
+          onclick="openNav()"
+          >&#9776; More</span
+        >
+
         <a
           href="https://duckduckgo.com/"
           target="_blank"
@@ -21,19 +29,35 @@
         >
           DuckDuckGo</a
         >
+
         <a href="#footer">Go to Bottom</a>
         <a href="http://example.org">Example</a>
       </div>
+
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+          >&times;</a
+        >
+        <a href="#">Dummy Link1</a>
+        <a href="#">Dummy Link2</a>
+        <a href="#">Dummy Link3</a>
+        <a href="#">Dummy Link4</a>
+      </div>
     </div>
+
     <img id="himg" src="img/5.png" /><br />
-    <div id="sidebar2">
+
+    <div id="sidebar1">
       <p>
         <a
           href="https://commons.wikimedia.org/w/index.php?curid=9040865"
           target="_blank"
           rel="noopener noreferrer"
           >"Line of Purples" Image By Spigget - Own work, CC BY-SA 3.0,</a
-        ><br /><br />
+        >
+
+        <br /><br />
+
         <a
           href="https://unsplash.com/@sushioutlaw"
           target="_blank"
@@ -42,6 +66,7 @@
         </a>
       </p>
     </div>
+
     <div id="content">
       <p>
         Purple is closely associated with violet. In common usage, both refer to
@@ -68,26 +93,34 @@
         of red, blue, and violet light; to other native speakers of English, the
         same range of colors is referred to as violet .
       </p>
+
       <a href="https://en.wikipedia.org/wiki/Purple">Source: Wikipedia</a>
+
       <a
         title="Spigget, CC BY-SA 3.0 &lt;https://creativecommons.org/licenses/by-sa/3.0&gt;, via Wikimedia Commons"
         href="https://commons.wikimedia.org/wiki/File:Line_of_purples.png"
-      ></a
-      ><br /><br />
+      ></a>
+
+      <br /><br />
+
       <img
         width="450"
         alt="Line of purples"
         src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Line_of_purples.png/512px-Line_of_purples.png"
       />
     </div>
-    <div id="sidebar1">
+
+    <div id="sidebar2">
       <p>
         <a
           href="https://commons.wikimedia.org/w/index.php?curid=9040865"
           target="_blank"
           rel="noopener noreferrer"
           >"Line of Purples" Image By Spigget - Own work, CC BY-SA 3.0,</a
-        ><br /><br />
+        >
+
+        <br /><br />
+
         <a
           href="https://unsplash.com/@sushioutlaw"
           target="_blank"
@@ -98,6 +131,7 @@
     </div>
 
     <div id="wrap"></div>
+
     <div id="footer">© your-name</div>
   </body>
 </html>
