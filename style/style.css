@@ -83,6 +83,12 @@ a:active {
   border-radius: 5px;
 }
 
+#headerimg {
+  /* border: 10px solid black; */
+
+  float: right;
+  margin-right: 1%;
+}
 #header {
   border-radius: 10px;
   padding-left: 20px;
