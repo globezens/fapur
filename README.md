@@ -1,3 +1,3 @@
 # Fat Purples
 
-NOTE -> SITE IS BROKEN :'(
+NOTE -> Error Fixed! Yay! :)
